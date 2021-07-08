@@ -5,6 +5,8 @@ import Statistics from "./hw-02/components/Statistics";
 import statisticalData from "./hw-02/data/statistical-data.json";
 import FriendList from "./hw-03/components/FriendList";
 import friends from "./hw-03/data/friends.json";
+import TransactionHistory from "./hw-04/components/TransactionHistory";
+import transaction from "./hw-04/data/transactions";
 
 const App = () => (
   <div>
@@ -17,6 +19,7 @@ const App = () => (
     />
     <Statistics title="Upload Stats" stats={statisticalData} />
     <FriendList friends={friends} />
+    <TransactionHistory items={transaction} />
   </div>
 );
 
