@@ -1,19 +1,26 @@
 import React from "react";
+import PropTypes from "prop-types";
 import StatsItem from "./StatsItem";
 
 const Statistics = ({ title, stats }) => (
   <section className="statistics">
-    <h2 className="title">{title.length === 0 ? "" : "Upload stats"}</h2>
+    {title && <h2 className="title">{title}</h2>}
     <ul className="stat-list">
-      {stats.map((item) => (
-        <StatsItem
-          key={item.id}
-          label={item.label}
-          percentage={item.percentage}
-        />
+      {stats.map(({ id, label, percentage }) => (
+        <StatsItem key={id} label={label} percentage={percentage} />
       ))}
     </ul>
   </section>
 );
+
+Statistics.propTypes = {
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ),
+};
 
 export default Statistics;

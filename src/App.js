@@ -13,7 +13,7 @@ const App = () => (
       avatar={user.avatar}
       stats={user.stats}
     />
-    <Statistics title="Upload stats" stats={statisticalData} />
+    <Statistics title="Upload Stats" stats={statisticalData} />
   </div>
 );
 
