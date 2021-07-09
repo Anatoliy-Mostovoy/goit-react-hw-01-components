@@ -1,0 +1,33 @@
+.statistics {
+  width: 450px;
+  border: 1px solid inherit;
+
+  outline: none;
+  margin: 20px auto;
+
+  background-color: whitesmoke;
+  color: black;
+}
+.title {
+  text-align: center;
+  margin: 0;
+  padding: 20px 0;
+}
+.stat {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+.item {
+  width: calc(100% / 4);
+  align-items: center;
+  text-align: center;
+  padding: 30px 0;
+  color: black;
+  background-color: coral;
+}
+
+.label {
+  margin-right: 3px;
+}
