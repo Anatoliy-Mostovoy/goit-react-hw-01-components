@@ -4,7 +4,7 @@ import TransactionInfo from './TransactionInfo';
 import s from './Transaction.module.css';
 
 const TransactionHistory = ({ items }) => (
-  <table className="transaction-history">
+  <table className={s.transactionHistory}>
     <thead>
       <tr>
         <th>Type</th>
@@ -14,16 +14,14 @@ const TransactionHistory = ({ items }) => (
     </thead>
 
     <tbody>
-      <tr>
-        {items.map(({ id, type, amount, currency }) => (
-          <TransactionInfo
-            key={id}
-            type={type}
-            amount={amount}
-            currency={currency}
-          />
-        ))}
-      </tr>
+      {items.map(({ id, type, amount, currency }) => (
+        <TransactionInfo
+          key={id}
+          type={type}
+          amount={amount}
+          currency={currency}
+        />
+      ))}
     </tbody>
   </table>
 );
