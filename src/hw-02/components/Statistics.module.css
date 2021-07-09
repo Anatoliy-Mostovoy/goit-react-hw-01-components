@@ -7,7 +7,13 @@
 
   background-color: whitesmoke;
   color: black;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
+
+.statistics:hover {
+  box-shadow: 0 0 20px rgba(206, 9, 9, 0.5);
+}
+
 .title {
   text-align: center;
   margin: 0;

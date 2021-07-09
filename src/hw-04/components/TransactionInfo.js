@@ -1,5 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
+import s from './Transaction.module.css';
 
 const TransactionInfo = ({ type, amount, currency }) => (
   <>
