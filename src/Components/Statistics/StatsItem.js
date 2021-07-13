@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import s from './Statistics.module.css';
 
-const StatsItem = ({ label, percentage }) => (
+export const StatsItem = ({ label, percentage }) => (
   <li className={s.item}>
     <span className={s.label}>{label}</span>
     <span className="percentage">{percentage}%</span>
@@ -10,8 +10,6 @@ const StatsItem = ({ label, percentage }) => (
 );
 
 StatsItem.propTypes = {
-  label: PropTypes.string,
-  percentage: PropTypes.number,
+  label: PropTypes.string.isRequired,
+  percentage: PropTypes.number.isRequired,
 };
-
-export default StatsItem;

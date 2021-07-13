@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import TransactionInfo from './TransactionInfo';
+import { TransactionInfo } from './TransactionInfo';
 import s from './Transaction.module.css';
 
-const TransactionHistory = ({ items }) => (
+export const TransactionHistory = ({ items }) => (
   <table className={s.transactionHistory}>
     <thead>
       <tr>
@@ -30,8 +30,6 @@ TransactionHistory.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
-    }),
+    }).isRequired,
   ).isRequired,
 };
-
-export default TransactionHistory;

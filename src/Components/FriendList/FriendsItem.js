@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import s from './Friends.module.css';
 
-const FriendsItem = ({ avatar, name, isOnline }) => (
+export const FriendsItem = ({ avatar, name, isOnline }) => (
   <li className={s.item}>
     <span
       className={s.status}
@@ -11,9 +11,7 @@ const FriendsItem = ({ avatar, name, isOnline }) => (
           ? { backgroundColor: 'green' }
           : { backgroundColor: 'red' }
       }
-    >
-      {isOnline}
-    </span>
+    ></span>
     <img className="avatar" src={avatar} alt={name} width="50" height="50" />
     <p className={s.name}>{name}</p>
   </li>
@@ -24,5 +22,3 @@ FriendsItem.propTypes = {
   name: PropTypes.string.isRequired,
   isOnline: PropTypes.bool.isRequired,
 };
-
-export default FriendsItem;

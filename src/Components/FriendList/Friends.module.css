@@ -19,11 +19,13 @@
 .item:hover {
   box-shadow: 0 0 20px rgba(206, 9, 9, 0.5);
   cursor: pointer;
+  transform: scale(1.2);
 }
 
 .name {
   padding-left: 10px;
   font-size: 20px;
+  margin: 0;
 }
 
 .status {
