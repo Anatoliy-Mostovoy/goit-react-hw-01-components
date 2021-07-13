@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import s from './Ffriends.module.css';
+import s from './Friends.module.css';
 
 const FriendsItem = ({ avatar, name, isOnline }) => (
   <li className={s.item}>

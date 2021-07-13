@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import FriendsItem from './FriendsItem';
-import s from './Ffriends.module.css';
+import s from './Friends.module.css';
 
 const FriendList = ({ friends }) => (
   <ul className={s.friendList}>
